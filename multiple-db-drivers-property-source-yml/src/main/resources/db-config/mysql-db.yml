@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    thirdParty:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3333/thirdparty_db?createDatabaseIfNotExist=true
+      username: root
+      password: root
