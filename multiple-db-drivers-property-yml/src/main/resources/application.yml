@@ -1,0 +1,23 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: multiple-db-drivers-yml-property
+  datasource:
+    base:
+      driverClassName: org.mariadb.jdbc.Driver
+      url: jdbc:mariadb://localhost:3306/base_db?createDatabaseIfNotExist=true
+      username: root
+      password:
+    thirdParty:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3333/thirdparty_db?createDatabaseIfNotExist=true
+      username: root
+      password: root
+
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
